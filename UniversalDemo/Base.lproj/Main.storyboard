@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UniversalDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMQ-bD-M9K">
+                                <rect key="frame" x="539" y="97.5" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzV-J4-frw">
+                                <rect key="frame" x="542" y="227.5" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-9p-dQv">
+                                <rect key="frame" x="20" y="20" width="250" height="242"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jpY-Al-iIX">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="242"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Sunset" translatesAutoresizingMaskIntoConstraints="NO" id="EPe-F5-1LD">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="242"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EPe-F5-1LD" secondAttribute="height" multiplier="92:89" id="XLx-yi-L78"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xUo-9p-dQv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1qW-jW-OkX"/>
+                            <constraint firstAttribute="trailing" secondItem="JMQ-bD-M9K" secondAttribute="trailing" constant="25" id="A3A-hK-90E"/>
+                            <constraint firstItem="qzV-J4-frw" firstAttribute="top" secondItem="JMQ-bD-M9K" secondAttribute="bottom" constant="100" id="GUu-Bf-37z"/>
+                            <constraint firstAttribute="trailing" secondItem="qzV-J4-frw" secondAttribute="trailing" constant="28" id="Hf4-Tn-rOA"/>
+                            <constraint firstItem="JMQ-bD-M9K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NIz-ob-iRc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xUo-9p-dQv" secondAttribute="trailing" id="XVp-Wr-aMd"/>
+                            <constraint firstItem="JMQ-bD-M9K" firstAttribute="top" secondItem="xUo-9p-dQv" secondAttribute="bottom" constant="200" id="Y6x-Kv-DG2"/>
+                            <constraint firstItem="xUo-9p-dQv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sL5-S4-ITV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1qW-jW-OkX"/>
+                                <exclude reference="XVp-Wr-aMd"/>
+                                <exclude reference="sL5-S4-ITV"/>
+                                <exclude reference="NIz-ob-iRc"/>
+                                <exclude reference="Y6x-Kv-DG2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="qzV-J4-frw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="GUu-Bf-37z"/>
+                                <exclude reference="Hf4-Tn-rOA"/>
+                                <include reference="1qW-jW-OkX"/>
+                                <include reference="XVp-Wr-aMd"/>
+                                <include reference="sL5-S4-ITV"/>
+                                <exclude reference="A3A-hK-90E"/>
+                                <include reference="NIz-ob-iRc"/>
+                                <include reference="Y6x-Kv-DG2"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="433.5" y="468.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sunset" width="250" height="187"/>
+    </resources>
 </document>
